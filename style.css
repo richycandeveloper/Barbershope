@@ -1,0 +1,702 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Sidebar Navigation */
+.sidenav {
+    width: 250px;
+    background-color: #333;
+    color: #fff;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -250px; /* Hidden by default */
+    transition: 0.3s; /* Smooth transition */
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.sidenav h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidenav ul {
+    list-style: none;
+}
+
+.sidenav li {
+    margin: 10px 0;
+}
+
+.sidenav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.sidenav a:hover {
+    background-color: #575757;
+}
+
+/* Menu Icon */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 15px;
+    color: #333;
+    background-color: #333;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1000;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+/* When Sidebar is Active */
+.sidenav.active {
+    left: 0;
+}
+
+
+/* Main Content Container */
+.main-content {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Landing Page Styling */
+.landing {
+    padding: 60px 20px;
+    background-color: #282c34;
+    color: #ffffff;
+    border-radius: 10px;
+}
+
+.landing h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.landing p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #f8f8f8;
+    line-height: 1.5;
+}
+
+/* Buttons Styling */
+.auth-buttons button {
+    background-color: #ffcc00;
+    color: #282c34;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.auth-buttons button:hover {
+    background-color: #ffb300;
+    transform: translateY(-3px);
+}
+
+.auth-buttons button:active {
+    transform: translateY(1px);
+}
+
+/* Keyframe Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Services Section */
+.services-section {
+    padding: 60px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.services-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* Services Container */
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Service Item */
+.service-item {
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px; /* Slightly rounded corners */
+    transition: transform 0.3s;
+}
+
+/* Triangle Shapes */
+.service-item:before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 75px solid transparent;
+    border-right: 75px solid transparent;
+}
+
+/* Specific Colors for Each Service */
+.haircut:before {
+    border-bottom: 75px solid #ffcc00; /* Yellow */
+}
+
+.beard-trim:before {
+    border-bottom: 75px solid #28a745; /* Green */
+}
+
+.shampoo:before {
+    border-bottom: 75px solid #007bff; /* Blue */
+}
+
+.hair-coloring:before {
+    border-bottom: 75px solid #dc3545; /* Red */
+}
+
+.shaving:before {
+    border-bottom: 75px solid #17a2b8; /* Cyan */
+}
+
+.grooming:before {
+    border-bottom: 75px solid #ffc107; /* Orange */
+}
+
+/* Hover Effect */
+.service-item:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.service-item:hover:before {
+    opacity: 0.8; /* Fade effect on hover */
+}
+/* Professional Styling for <h2> */
+h2 {
+    font-family: 'Poppins', sans-serif; /* Use a modern, clean font */
+    font-size: 2.8rem;
+    color: #2c3e50; /* A sophisticated dark blue-gray color */
+    text-transform: uppercase; /* Make the text uppercase for emphasis */
+    letter-spacing: 2px; /* Add space between letters for a modern look */
+    margin-bottom: 20px; /* Space below the heading */
+    position: relative; /* For adding the decorative line */
+}
+
+/* Decorative Line Under the <h2> */
+h2::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background-color: #ffcc00; /* A striking yellow accent color */
+    bottom: -10px; /* Position the line below the text */
+    left: 50%;
+    transform: translateX(-50%); /* Center the line */
+}
+/* Price List Section */
+.pricing-section {
+    padding: 50px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Price List Styles */
+.price-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.price-item {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #3498db; /* Default blue color */
+    padding: 20px 30px;
+    border-radius: 10px;
+    min-width: 150px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+/* Unique Colors for Each Price Item */
+.price-item:nth-child(1) {
+    background-color: #e74c3c; /* Red */
+}
+
+.price-item:nth-child(2) {
+    background-color: #2ecc71; /* Green */
+}
+
+.price-item:nth-child(3) {
+    background-color: #f39c12; /* Orange */
+}
+
+.price-item:nth-child(4) {
+    background-color: #9b59b6; /* Purple */
+}
+
+.price-item:nth-child(5) {
+    background-color: #1abc9c; /* Teal */
+}
+
+/* Hover Effect */
+.price-item:hover {
+    transform: translateY(-10px); /* Lift the item */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+/* Online Booking Section */
+.booking-section {
+    padding: 60px 20px;
+    background-color: #f7f9fc; /* Light background color for a clean look */
+    text-align: center;
+    border-radius: 12px;
+    margin: 30px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Poppins', sans-serif; /* Use a modern font */
+}
+
+.booking-section h2 {
+    font-size: 2.5rem;
+    color: #2c3e50; /* Dark blue-gray color for the heading */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.booking-section p {
+    font-size: 1.1rem;
+    color: #555; /* Subtle gray for the description */
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Book Now Button */
+.book-now-btn {
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #3498db; /* Blue color for the button */
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.book-now-btn:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+    transform: translateY(-3px); /* Lift the button on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+
+/* General Styling for the Gallery Section */
+.gallery-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #f9f9fb; /* Soft, light background color */
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+}
+
+.gallery-section h2 {
+    font-size: 2.5rem;
+    color: #333; /* Dark text color for contrast */
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Image Gallery Grid */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Space between grid items */
+    padding: 0;
+}
+
+/* Image Card Styling */
+.image-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: #ffffff;
+    width: 100%; /* Ensure the card takes the full width of the grid column */
+    aspect-ratio: 4 / 3; /* Aspect ratio to make all cards uniform */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Image Styling */
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Crop the image to cover the container while preserving aspect ratio */
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* Image Caption Styling */
+.image-caption {
+    font-size: 1rem;
+    color: #555; /* Medium gray color */
+    padding: 15px;
+    text-align: center;
+    background-color: #fff; /* White background */
+    border-radius: 0 0 10px 10px; /* Rounded corners on the bottom */
+}
+
+/* Hover Effect */
+.image-card:hover {
+    transform: translateY(-10px); /* Lift the card slightly on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.image-card:hover img {
+    transform: scale(1.05); /* Zoom in the image slightly */
+    opacity: 0.9; /* Slightly reduce opacity for a fade effect */
+}
+
+
+/* Location Section Styling */
+.location-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f1f4f8; /* Light gray background */
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.location-section h2 {
+    font-size: 2rem;
+    color: #2c3e50; /* Dark text color */
+    margin-bottom: 20px;
+}
+
+.location-section p {
+    font-size: 1.1rem;
+    color: #555; /* Medium gray text */
+    margin-bottom: 20px;
+}
+
+iframe {
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+/* General Styling for the Contact Section */
+.contact-section {
+    padding: 60px 20px;
+    background: url('images/img12.jpg') no-repeat center center/cover; /* Background image */
+    color: #fff; /* White text for good contrast */
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Heading Styling */
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between form elements */
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Label Styling */
+label {
+    font-size: 1rem;
+    color: #f1f1f1; /* Light gray text */
+}
+
+/* Input Styling */
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Small shadow for depth */
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #ff5733; /* Bright, eye-catching button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e14e2d; /* Darker color on hover */
+}
+/* Footer Styling */
+.footer {
+    background-color: #222; /* Dark background */
+    color: #fff; /* White text */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact,
+.footer-social {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+/* Footer Headings */
+.footer h3, .footer h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+}
+
+/* Quick Links Styling */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    color: #ddd; /* Light gray color for links */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ff5733; /* Accent color on hover */
+}
+
+/* Contact Info */
+.footer-contact p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+/* Social Media Links */
+.footer-social a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #ff5733; /* Accent color on hover */
+}
+
+/* Copyright Text */
+.footer-copyright {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    color: #aaa; /* Light gray for subtle text */
+}
+/* Default Styles (for larger screens like laptops and desktops) */
+/* You should define your main styles here */
+
+/* Large screens (laptops/desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+/* Medium screens (tablets, 768px to 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .container {
+        max-width: 750px;
+        padding: 0 20px;
+    }
+
+    /* Adjust navigation */
+    .sidenav {
+        font-size: 1rem;
+        padding: 10px;
+    }
+    
+    /* Adjust image gallery */
+    .image-gallery img {
+        width: 100%; /* Make images take the full width */
+    }
+}
+
+/* Small screens (phones, 480px to 767px) */
+@media (max-width: 767px) and (min-width: 480px) {
+    .container {
+        max-width: 480px;
+        padding: 0 15px;
+    }
+
+    /* Adjust font sizes */
+    h1, h2, h3, h4 {
+        font-size: 1.5rem;
+    }
+
+    /* Stack navigation items vertically */
+    .sidenav {
+        display: block;
+        text-align: center;
+    }
+
+    /* Adjust buttons and forms */
+    .auth-buttons button {
+        width: 100%; /* Full-width buttons */
+        margin: 10px 0;
+    }
+}
+
+/* Extra small screens (phones, 479px and below) */
+@media (max-width: 479px) {
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    /* Smaller font sizes */
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    /* Simplify the layout */
+    .sidenav {
+        font-size: 0.9rem;
+    }
+
+    .image-gallery {
+        display: block;
+    }
+
+    .image-gallery img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* Footer adjustments */
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links ul {
+        text-align: center;
+    }
+}

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+
+
+    <title>Barbershop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!-- Menu Icon -->
+<div class="menu-icon" onclick="toggleNav()">
+    <span></span> <!-- Middle line -->
+</div>
+
+    <nav class="sidenav">
+        <h3></h3>
+        <ul>
+            <li><a href="#landing">Home</a></li>
+            <li><a href="#services">Our Services</a></li>
+            <li><a href="#pricing">Price List</a></li>
+            <li><a href="#booking">Online Booking</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Landing Page Section -->
+        <section id="landing" class="landing">
+            <h1>Welcome to Our Barbershop</h1>
+            <P>EMMY GEE SALON</P>
+            <p>Your grooming experience, redefined.</p>
+            <div class="auth-buttons">
+                <button onclick="createAccount()">Create Account</button>
+                <button onclick="login()">Login</button>
+                <button onclick="signUp()">Sign Up</button>
+            </div>
+        </section>
+
+        <!-- Our Services Section -->
+<section id="services" class="services-section">
+    <h2>Our Services</h2><br><br>
+    <div class="services-container">
+        <div class="service-item haircut">Haircut</div>
+        <div class="service-item beard-trim">Beard Trim</div>
+        <div class="service-item shampoo">Shampoo & Conditioning</div>
+        <div class="service-item hair-coloring">Hair Coloring</div>
+        <div class="service-item shaving">Shaving</div>
+        <div class="service-item grooming">Grooming Packages</div>
+    </div>
+</section>
+
+
+      <!-- Price List Section -->
+<section id="pricing" class="pricing-section">
+    <h2>Price List</h2>
+    <ul class="price-list">
+        <li class="price-item">Haircut - #1500</li>
+        <li class="price-item">Beard Trim - #1000</li>
+        <li class="price-item">Shampoo - #800</li>
+        <li class="price-item">Hair Coloring - #5000</li>
+        <li class="price-item">Shaving - #700</li>
+        <li class="price-item">facial - #6000</li>
+        <li class="price-item">pedcure #3000</li>
+    </ul>
+</section>
+
+
+      <!-- Online Booking Section -->
+<section id="booking" class="booking-section">
+    <h2>Online Booking</h2>
+    <p>Book your appointment with our expert barbers today!</p>
+    <button class="book-now-btn">Book Now</button>
+</section>
+
+       <!-- Gallery Section -->
+<section id="gallery" class="gallery-section">
+    <h2>customers review</h2>
+    <div class="image-gallery">
+        <div class="image-card">
+            <img src="images/Haircut-For-Round-Face-img.jpg" alt="Stylish Haircut">
+            <p class="image-caption">Stylish Haircut</p>
+        </div>
+        <div class="image-card">
+            <img src="images/classic2 haircut.jpg" alt="Classic Haircut">
+            <p class="image-caption">Classic Haircut</p>
+        </div>
+        <div class="image-card">
+            <img src="images/img4.jpg" alt="Modern Beard Trim">
+            <p class="image-caption">Modern Beard Trim</p>
+        </div>
+        <div class="image-card">
+            <img src="images/img13.jpg" alt="Modern Beard Trim">
+            <p class="image-caption">Modern Beard Trim</p>
+        </div>
+        <div class="image-card">
+            <img src="images/img12.jpg" alt="Modern Beard Trim">
+            <p class="image-caption">Modern Beard Trim</p>
+        </div>
+        <div class="image-card">
+            <img src="images/img11.jpg" alt="Modern Beard Trim">
+            <p class="image-caption">Modern Beard Trim</p>
+        </div>
+        <div class="image-card">
+            <img src="images/img10.jpg" alt="Modern Beard Trim">
+            <p class="image-caption">Modern Beard Trim</p>
+        </div>
+        <div class="image-card">
+            <img src="images/img9.jpg" alt="Modern Beard Trim">
+            <p class="image-caption">Modern Beard Trim</p>
+        </div>
+        <div class="image-card">
+            <img src="images/img8.jpg" alt="Modern Beard Trim">
+            <p class="image-caption">Modern Beard Trim</p>
+        </div>
+        <div class="image-card">
+            <img src="images/img7.jpg" alt="Modern Beard Trim">
+            <p class="image-caption">Modern Beard Trim</p>
+        </div>
+        <div class="image-card">
+            <img src="images/img6.jpg" alt="Modern Beard Trim">
+            <p class="image-caption">Modern Beard Trim</p>
+        </div>
+        <div class="image-card">
+            <img src="images/img5.jpg" alt="Modern Beard Trim">
+            <p class="image-caption">Modern Beard Trim</p>
+        </div>
+        <div class="image-card">
+            <img src="images/img4.jpg" alt="Modern Beard Trim">
+            <p class="image-caption">Modern Beard Trim</p>
+        </div>
+        <div class="image-card">
+            <img src="images/img3.jpg" alt="Modern Beard Trim">
+            <p class="image-caption">Modern Beard Trim</p>
+        </div>
+        <div class="image-card">
+            <img src="images/img2.jpg" alt="Modern Beard Trim">
+            <p class="image-caption">Modern Beard Trim</p>
+        </div>
+        <div class="image-card">
+            <img src="images/img1.jpg" alt="Modern Beard Trim">
+            <p class="image-caption">Modern Beard Trim</p>
+        </div>
+    </div>
+</section>
+
+       <!-- Location Section -->
+<section id="location" class="location-section">
+    <h2>Our Location</h2>
+    <p id="location-address"></p>
+    <iframe id="map-frame" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen></iframe>
+</section>
+
+       <!-- Contact Us Section -->
+<section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <button type="submit">Submit</button>
+    </form>
+</section>
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Logo and Description -->
+        <div class="footer-about">
+            <h3>Emmy Gee Barbershop</h3>
+            <p>Providing the best grooming experience with style and class. Visit us for your next great look!</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="#landing">Home</a></li>
+                <li><a href="#services">Our Services</a></li>
+                <li><a href="#pricing">Price List</a></li>
+                <li><a href="#booking">Online Booking</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-contact">
+            <h4>Contact Us</h4>
+            <p>123 Main Street, Ugwuaji, Enugu State, Nigeria</p>
+            <p>Phone: +234 123 456 7890</p>
+            <p>Email: info@emmygeebarbershop.com</p>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="footer-social">
+            <h4>Follow Us</h4>
+            <a href="#" class="social-icon">Facebook</a>
+            <a href="#" class="social-icon">Instagram</a>
+            <a href="#" class="social-icon">Twitter</a>
+        </div>
+    </div>
+    <p class="footer-copyright">© 2024 Emmy Gee Barbershop. All rights reserved.</p>
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
